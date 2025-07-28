@@ -18,7 +18,9 @@
 
 
 ![Summary](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=onurerguden&theme=github_dark)
-![Languages](https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=onurerguden&theme=github_dark)
+
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=onurerguden&layout=compact&theme=radical&cache_seconds=60)](https://github.com/anuraghazra/github-readme-stats)
 ![Activity](https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=onurerguden&theme=github_dark&utcOffset=3)
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=onurerguden&theme=radical&hide_border=true)](https://git.io/streak-stats)
