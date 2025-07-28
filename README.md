@@ -2,8 +2,6 @@
 
 
 
-
-
 # 💫 About Me:
 👋 Hey there, I’m Onur Ergüden!<br><br>I’m a Software Engineering student passionate about problem-solving, clean code, and scalable software design. With strong skills in Java, OOP, and Agile methodologies, I love building efficient, well-structured applications and continuously improving my craft.<br><br>💻 What I Do:<br>	•	Full-Stack Development – Java, Python, Flutter & Dart<br>	•	Software Architecture & Design – OOP, SOLID, Design Patterns<br>	•	Cross-Platform Development – Mobile Apps & Web Apps<br>	•	Data Structures & Algorithms – Writing optimized & scalable code<br>	•	Agile & Scrum – Effective teamwork & project management<br><br>🚀 Projects & Experience:<br><br>🔹 Hotel Manager – A hotel management system with SQLite & Java for real-time guest tracking<br>🔹 ScoreStack – A football match prediction app with AI-driven analytics<br>🔹 Bluejack – A card game with AI-based decision-making<br>🔹 Best Hotels for You – A hotel listing app using Python & Web Scraping<br><br>📌 Work Experience:<br><br>🛠 Software & Hardware Specialist at Cashmere Hotel Kuşadası – Managing Elektraweb Software & IT systems<br><br>🔎 Always Learning:<br><br>I’m constantly exploring new technologies, frameworks, and best practices to enhance my skills. Currently diving deeper into machine learning and cloud computing.<br><br>
 ## 📫 Let’s Connect!
