@@ -25,6 +25,6 @@
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=onurerguden&theme=radical&hide_border=true)](https://git.io/streak-stats)
 ---
-[![](https://visitcount.itsvg.in/api?id=onurerguden&icon=0&color=2)](https://visitcount.itsvg.in)
+
 
 
