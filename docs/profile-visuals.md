@@ -14,6 +14,8 @@ The static engineering drawing has separate wide (900 × 96) and narrow (450 × 
 
 Actions are pinned to commit SHAs; the stats core is pinned to 2.2.1. The workflow uses the built-in repository token and no additional secrets. It fails on a stats-fetch error so that the last successful cards remain available. Generated assets do not trigger another run.
 
+`scripts/prepare_cards.py` derives 330 × 180 narrow cards from the same generated values without another API call. On small screens the text remains readable rather than scaling a wide layout down.
+
 The stats card labels its commit period. PR and star totals are cumulative. The language card measures code size in public, non-fork repositories, excluding this profile's generated SVGs. It is not a measure of proficiency or hours spent coding. These cards do not expose private repository details.
 
 ## Snake behavior

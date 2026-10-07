@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [.github/workflows/profile-visuals.yml, scripts/prepare_snake.py]
+    paths: [.github/workflows/profile-visuals.yml, scripts/prepare_snake.py, scripts/prepare_cards.py]
 
 concurrency:
   group: profile-visuals
@@ -67,6 +67,9 @@ jobs:
           core_version: 2.2.1
           fail_on_error: true
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create readable narrow cards
+        run: python3 scripts/prepare_cards.py
 
       - name: Generate contribution snake
         uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3

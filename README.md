@@ -98,8 +98,8 @@ More work: [İzmir transport demand analysis](https://github.com/onurerguden/IZM
 ## GitHub activity
 
 <p>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg"><img src="assets/activity-light.svg" width="400" alt="GitHub activity: stars, commits in the last year, pull requests and merged pull requests"></picture>
-  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/code-languages-dark.svg"><img src="assets/code-languages-light.svg" width="400" alt="Code-size distribution of languages in my public repositories"></picture>
+  <picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/activity-narrow-dark.svg"><source media="(max-width: 600px)" srcset="assets/activity-narrow-light.svg"><source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg"><img src="assets/activity-light.svg" width="400" alt="GitHub activity: stars, commits in the last year, pull requests and merged pull requests"></picture>
+  <picture><source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/code-languages-narrow-dark.svg"><source media="(max-width: 600px)" srcset="assets/code-languages-narrow-light.svg"><source media="(prefers-color-scheme: dark)" srcset="assets/code-languages-dark.svg"><img src="assets/code-languages-light.svg" width="400" alt="Code-size distribution of languages in my public repositories"></picture>
 </p>
 
 <sub>Updated daily. Language percentages describe repository code, not skill levels. [About these visuals](docs/profile-visuals.md).</sub>
