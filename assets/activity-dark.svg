@@ -13,7 +13,7 @@
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
-            fill: #a5b4fc;
+            fill: #7fc8ff;
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
@@ -46,18 +46,18 @@
     .not_bold { font-weight: 400 }
     .bold { font-weight: 700 }
     .icon {
-      fill: #2dd4bf;
+      fill: #d8f23c;
       display: block;
     }
 
     .rank-circle-rim {
-      stroke: #a5b4fc;
+      stroke: #7fc8ff;
       fill: none;
       stroke-width: 6;
       opacity: 0.2;
     }
     .rank-circle {
-      stroke: #a5b4fc;
+      stroke: #7fc8ff;
       stroke-dasharray: 250;
       fill: none;
       stroke-width: 6;
@@ -118,7 +118,7 @@
           height="99%"
           stroke="#30363d"
           width="439"
-          fill="#0d1117"
+          fill="#080e1c"
           stroke-opacity="1"
         />
 

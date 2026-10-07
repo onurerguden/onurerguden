@@ -2,24 +2,81 @@
 
 **Software & AI Engineer**
 
-I build RAG applications and tool-calling workflows, mostly with Python, LangGraph and Qdrant. I also work on the product around them: APIs, React interfaces and mobile apps.
-
-My recent projects include a local curriculum assistant, drinking-water safety research and a personal strength coach connected to ChatGPT through MCP. I like working through the details: what gets retrieved, how answers are evaluated and what happens when a tool call fails.
+I build AI applications, APIs, and web & mobile products. Recent work includes a local course assistant, a strength coach connected through MCP, and drinking-water safety research.
 
 [Portfolio & case studies](https://onurerguden.dev) · [LinkedIn](https://www.linkedin.com/in/onurerguden/) · [Email](mailto:onurerguden5@gmail.com)
 
-## Stack
-
-**Languages**
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/tech/languages-dark.svg">
-  <img src="assets/tech/languages-light.svg" height="36" alt="Python, TypeScript, Java, Kotlin and Dart">
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/engineering-narrow-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/engineering-narrow-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/engineering-wide-dark.svg">
+  <img src="assets/engineering-wide-light.svg" width="100%" alt="A geometric drawing connects documents, a data workflow, code, and an application interface.">
 </picture>
 
-Python · TypeScript · Java · Kotlin · Dart
+## Selected work
 
-**AI & retrieval**
+### Course Intelligence RAG
+
+A local assistant for university course documents, with department-aware retrieval, hierarchical chunks, and a desktop interface.
+
+<sub>Python · Llama 3.1 · SBERT · FAISS</sub><br>
+[RAG code](https://github.com/onurerguden/IEU-Chat-Bot) · [RAG case study](https://onurerguden.dev/en/projects/course-intelligence)
+
+### GymRap AI Coach
+
+Connects Android health data to ChatGPT through authenticated MCP tools. Training calculations run in code; the model handles coaching.
+
+<sub>Kotlin · TypeScript · Health Connect · MCP</sub><br>
+[GymRap code](https://github.com/onurerguden/GymRap-AI-Coach) · [GymRap case study](https://onurerguden.dev/en/projects/gymrap-ai-coach)
+
+### TaskFoo
+
+A project-management app with projects, epics, task workflows, role-based access, and real-time updates. Built during my software engineering internship.
+
+<sub>Java · Spring Boot · React · PostgreSQL</sub><br>
+[TaskFoo code](https://github.com/onurerguden/TaskFoo)
+
+### HealthFactor-AI
+
+Research into drinking-water safety classification and trend prediction, with separate evaluation of real and simulated contamination data.
+
+<sub>Python · scikit-learn · Time-series analysis</sub><br>
+[Water safety code](https://github.com/onurerguden/izsu_ai_project) · [Water safety case study](https://onurerguden.dev/en/projects/water-safety)
+
+I also co-developed **[Kuyumcum](https://onurerguden.dev/en/projects/kuyumcum)**, a closed-source Flutter product for precious-metal holdings and local merchants, and engineered its AI features.
+
+More work: [İzmir transport demand analysis](https://github.com/onurerguden/IZMIR-PUBLIC-TRANSPORTATION-ML) · [Portfolio source](https://github.com/onurerguden/onurerguden-portfolio)
+
+## Stack
+
+**Languages & applications**
+
+<p>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/python-dark.svg"><img src="assets/tech/python-light.svg" width="32" height="32" alt="Python"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/typescript-dark.svg"><img src="assets/tech/typescript-light.svg" width="32" height="32" alt="TypeScript"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/java-dark.svg"><img src="assets/tech/java-light.svg" width="32" height="32" alt="Java"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/kotlin-dark.svg"><img src="assets/tech/kotlin-light.svg" width="32" height="32" alt="Kotlin"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/dart-dark.svg"><img src="assets/tech/dart-light.svg" width="32" height="32" alt="Dart"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/react-dark.svg"><img src="assets/tech/react-light.svg" width="32" height="32" alt="React"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/nextjs-dark.svg"><img src="assets/tech/nextjs-light.svg" width="32" height="32" alt="Next.js"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/fastapi-dark.svg"><img src="assets/tech/fastapi-light.svg" width="32" height="32" alt="FastAPI"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/spring-boot-dark.svg"><img src="assets/tech/spring-boot-light.svg" width="32" height="32" alt="Spring Boot"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/flutter-dark.svg"><img src="assets/tech/flutter-light.svg" width="32" height="32" alt="Flutter"></picture>
+</p>
+
+**ML, data & infrastructure**
+
+<p>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/pytorch-dark.svg"><img src="assets/tech/pytorch-light.svg" width="32" height="32" alt="PyTorch"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/tensorflow-dark.svg"><img src="assets/tech/tensorflow-light.svg" width="32" height="32" alt="TensorFlow"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/scikit-learn-dark.svg"><img src="assets/tech/scikit-learn-light.svg" width="32" height="32" alt="scikit-learn"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/postgresql-dark.svg"><img src="assets/tech/postgresql-light.svg" width="32" height="32" alt="PostgreSQL"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/firebase-dark.svg"><img src="assets/tech/firebase-light.svg" width="32" height="32" alt="Firebase"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/sqlite-dark.svg"><img src="assets/tech/sqlite-light.svg" width="32" height="32" alt="SQLite"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/docker-dark.svg"><img src="assets/tech/docker-light.svg" width="32" height="32" alt="Docker"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/git-dark.svg"><img src="assets/tech/git-light.svg" width="32" height="32" alt="Git"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/tech/cloudflare-dark.svg"><img src="assets/tech/cloudflare-light.svg" width="32" height="32" alt="Cloudflare"></picture>
+</p>
 
 <p>
   <img src="assets/tech/langchain.svg" alt="LangChain" height="24">
@@ -27,62 +84,29 @@ Python · TypeScript · Java · Kotlin · Dart
   <img src="assets/tech/qdrant.svg" alt="Qdrant" height="24">
   <img src="assets/tech/faiss.svg" alt="FAISS" height="24">
 </p>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/tech/ml-dark.svg">
-  <img src="assets/tech/ml-light.svg" height="36" alt="PyTorch, TensorFlow and scikit-learn">
-</picture>
 
-PyTorch · TensorFlow · scikit-learn
+<details>
+<summary>Full stack</summary>
 
-**Web & mobile**
+- **Languages:** Python, TypeScript, Java, Kotlin, Dart.
+- **AI & retrieval:** LangChain, LangGraph, Qdrant, FAISS, PyTorch, TensorFlow, scikit-learn.
+- **Web & mobile:** React, Next.js, FastAPI, Spring Boot, Flutter.
+- **Data & delivery:** PostgreSQL, Firebase, SQLite, Docker, Git, Cloudflare.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/tech/web-mobile-dark.svg">
-  <img src="assets/tech/web-mobile-light.svg" height="36" alt="React, Next.js, FastAPI, Spring Boot and Flutter">
-</picture>
-
-React · Next.js · FastAPI · Spring Boot · Flutter
-
-**Data & infrastructure**
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/tech/data-tools-dark.svg">
-  <img src="assets/tech/data-tools-light.svg" height="36" alt="PostgreSQL, Firebase, SQLite, Docker, Git and Cloudflare">
-</picture>
-
-PostgreSQL · Firebase · SQLite · Docker · Git · Cloudflare
-
-## Selected projects
-
-| Project | The work behind it |
-| --- | --- |
-| [Course Intelligence RAG](https://github.com/onurerguden/IEU-Chat-Bot) | Local Llama 3.1, SBERT and FAISS over university course documents. Department-aware retrieval, hierarchical chunks and a PyQt6 interface. [Case study](https://onurerguden.dev/en/projects/course-intelligence) |
-| [GymRap AI Coach](https://github.com/onurerguden/GymRap-AI-Coach) | An Android Health Connect bridge, a Cloudflare backend and OAuth-protected MCP tools. Training numbers are computed in code; ChatGPT writes the coaching. [Case study](https://onurerguden.dev/en/projects/gymrap-ai-coach) |
-| [HealthFactor-AI](https://github.com/onurerguden/izsu_ai_project) | Drinking-water safety classification and trend prediction. The research separates real and simulated contamination results and checks for data leakage. [Case study](https://onurerguden.dev/en/projects/water-safety) |
-| [TaskFoo](https://github.com/onurerguden/TaskFoo) | A Spring Boot and React project-management app I built at VBT Software: projects, epics, task workflows, role-based access and real-time updates. |
-
-I also co-developed **[Kuyumcum](https://onurerguden.dev/en/projects/kuyumcum)** and engineered its AI features. It's a Flutter product for precious-metal holdings and local merchants; the case study covers my contribution to the closed-source app.
-
-More work: [İzmir transport demand analysis](https://github.com/onurerguden/IZMIR-PUBLIC-TRANSPORTATION-ML) · [The source behind my portfolio](https://github.com/onurerguden/onurerguden-portfolio)
+</details>
 
 ## GitHub activity
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
-  <img src="assets/stats-light.svg" width="400" alt="GitHub activity: stars, commits in the last year, pull requests and merged pull requests">
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
-  <img src="assets/languages-light.svg" width="400" alt="Code-size distribution of languages in my public repositories">
-</picture>
+<p>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg"><img src="assets/activity-light.svg" width="400" alt="GitHub activity: stars, commits in the last year, pull requests and merged pull requests"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="assets/code-languages-dark.svg"><img src="assets/code-languages-light.svg" width="400" alt="Code-size distribution of languages in my public repositories"></picture>
+</p>
 
-<sub>Updated daily. Language percentages describe code in public repositories, not skill levels. [About these visuals](docs/profile-visuals.md).</sub>
-
-### Contribution snake
+<sub>Updated daily. Language percentages describe repository code, not skill levels. [About these visuals](docs/profile-visuals.md).</sub>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg">
-  <img src="assets/snake-light.svg" width="100%" alt="A snake moves through my GitHub contribution graph. The animation stops when reduced motion is enabled.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/contribution-snake-dark.svg">
+  <img src="assets/contribution-snake-light.svg" width="100%" alt="A snake with eyes and a forked tongue eats contribution squares and gradually grows. Reduced-motion preference stops the animation.">
 </picture>
 
 ## Background
@@ -106,4 +130,4 @@ Turkish (native) · English (C1)
 
 Away from the keyboard, I'm usually playing basketball or tennis, or reading.
 
-For project details or a copy of my CV: [onurerguden.dev](https://onurerguden.dev) · [onurerguden5@gmail.com](mailto:onurerguden5@gmail.com)
+For project details or a copy of my CV: [onurerguden.dev](https://onurerguden.dev) · [Email me](mailto:onurerguden5@gmail.com).

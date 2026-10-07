@@ -32,8 +32,8 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
         with:
           card: stats
-          options: '{"username":"onurerguden","show_icons":true,"hide_rank":true,"hide":"issues,contribs","show":"prs_merged","custom_title":"GitHub activity","card_width":440,"line_height":24,"number_format":"long","disable_animations":true,"border_radius":12,"border_color":"30363d","title_color":"a5b4fc","icon_color":"2dd4bf","text_color":"c9d1d9","bg_color":"0d1117"}'
-          path: assets/stats-dark.svg
+          options: '{"username":"onurerguden","show_icons":true,"hide_rank":true,"hide":"issues,contribs","show":"prs_merged","custom_title":"GitHub activity","card_width":440,"line_height":24,"number_format":"long","disable_animations":true,"border_radius":12,"border_color":"30363d","title_color":"7fc8ff","icon_color":"d8f23c","text_color":"c9d1d9","bg_color":"080e1c"}'
+          path: assets/activity-dark.svg
           core_version: 2.2.1
           fail_on_error: true
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -42,8 +42,8 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
         with:
           card: top-langs
-          options: '{"username":"onurerguden","layout":"compact","langs_count":6,"card_width":440,"custom_title":"Languages in public repos","exclude_repo":"onurerguden","border_radius":12,"disable_animations":true,"size_weight":1,"count_weight":0,"title_color":"a5b4fc","icon_color":"2dd4bf","text_color":"c9d1d9","bg_color":"0d1117","border_color":"30363d"}'
-          path: assets/languages-dark.svg
+          options: '{"username":"onurerguden","layout":"compact","langs_count":6,"card_width":440,"custom_title":"Languages in public repos","exclude_repo":"onurerguden","border_radius":12,"disable_animations":true,"size_weight":1,"count_weight":0,"title_color":"7fc8ff","icon_color":"d8f23c","text_color":"c9d1d9","bg_color":"080e1c","border_color":"30363d"}'
+          path: assets/code-languages-dark.svg
           core_version: 2.2.1
           fail_on_error: true
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -52,8 +52,8 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
         with:
           card: stats
-          options: '{"username":"onurerguden","show_icons":true,"hide_rank":true,"hide":"issues,contribs","show":"prs_merged","custom_title":"GitHub activity","card_width":440,"line_height":24,"number_format":"long","disable_animations":true,"border_radius":12,"border_color":"d0d7de","title_color":"4338ca","icon_color":"0f766e","text_color":"24292f","bg_color":"ffffff"}'
-          path: assets/stats-light.svg
+          options: '{"username":"onurerguden","show_icons":true,"hide_rank":true,"hide":"issues,contribs","show":"prs_merged","custom_title":"GitHub activity","card_width":440,"line_height":24,"number_format":"long","disable_animations":true,"border_radius":12,"border_color":"d0d7de","title_color":"235a83","icon_color":"527000","text_color":"24292f","bg_color":"ffffff"}'
+          path: assets/activity-light.svg
           core_version: 2.2.1
           fail_on_error: true
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -62,8 +62,8 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
         with:
           card: top-langs
-          options: '{"username":"onurerguden","layout":"compact","langs_count":6,"card_width":440,"custom_title":"Languages in public repos","exclude_repo":"onurerguden","border_radius":12,"disable_animations":true,"size_weight":1,"count_weight":0,"title_color":"4338ca","icon_color":"0f766e","text_color":"24292f","bg_color":"ffffff","border_color":"d0d7de"}'
-          path: assets/languages-light.svg
+          options: '{"username":"onurerguden","layout":"compact","langs_count":6,"card_width":440,"custom_title":"Languages in public repos","exclude_repo":"onurerguden","border_radius":12,"disable_animations":true,"size_weight":1,"count_weight":0,"title_color":"235a83","icon_color":"527000","text_color":"24292f","bg_color":"ffffff","border_color":"d0d7de"}'
+          path: assets/code-languages-light.svg
           core_version: 2.2.1
           fail_on_error: true
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -73,19 +73,19 @@ jobs:
         with:
           github_user_name: onurerguden
           outputs: |
-            assets/snake-light.svg?color_snake=#4338ca&color_dots=#ebedf0,#ccfbf1,#5eead4,#14b8a6,#0f766e
-            assets/snake-dark.svg?palette=github-dark&color_snake=#a5b4fc&color_dots=#161b22,#134e4a,#0f766e,#14b8a6,#5eead4
+            assets/contribution-snake-light.svg?color_snake=#527000&color_dots=#ebedf0,#dce9f5,#a8cbe6,#6397bf,#235a83
+            assets/contribution-snake-dark.svg?palette=github-dark&color_snake=#d8f23c&color_dots=#161b22,#152b44,#235a83,#5195c9,#7fc8ff
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Honor reduced-motion preference
+      - name: Give the snake character and growth
         run: python3 scripts/prepare_snake.py
 
       - name: Save generated visuals
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats-*.svg assets/languages-*.svg assets/snake-*.svg
+          git add assets/activity-*.svg assets/code-languages-*.svg assets/contribution-snake-*.svg
           if git diff --cached --quiet; then
             exit 0
           fi
