@@ -24,9 +24,13 @@ The original contribution grid, clearing times and route come from the pinned Pl
 
 If the expected upstream SVG structure changes, decoration fails rather than silently producing a broken animation; the workflow retains the last successful assets.
 
-## Technology icons
+## Technology badges and connections
 
-The icon rows are composed from [Skill Icons](https://github.com/tandpfun/skill-icons) SVGs. Its MIT license is included in `assets/tech/LICENSE`. The LangChain, LangGraph, Qdrant and FAISS text labels were drawn for this profile. Individual 32 px tiles wrap naturally on narrow screens. Each has descriptive alternative text; the full names also appear in the expandable Full stack section.
+The profile uses local, readable SVG badges with brand colors and [Simple Icons](https://github.com/simple-icons/simple-icons) 16.34.0 where available. Simple generic symbols cover tools without an available brand icon. Its license is included in `assets/badges/SIMPLE-ICONS-LICENSE`. Earlier Skill Icons assets retain their MIT license in `assets/tech/LICENSE`.
+
+The [full technology inventory](technology-inventory.md) is a dated snapshot of accessible personal and organization repositories, dependency manifests, import statements, and the published portfolio/CV. Private project names, files, code and credentials stay out of this repository. This inventory is separate from the daily public-repository language widget.
+
+Connect with me links are verified against the published site/GitHub profile or supplied directly by the profile owner. The Instagram account was supplied directly. The profile views badge uses [GitHub Profile Views Counter](https://github.com/antonkomarev/github-profile-views-counter); it counts image/page requests, not unique people or historic visits. No artificial base count is added.
 
 ## References
 
