@@ -72,8 +72,8 @@ More work: [İzmir transport demand analysis](https://github.com/onurerguden/IZM
   <img src="assets/stats-light.svg" width="400" alt="GitHub activity: stars, commits in the last year, pull requests and merged pull requests">
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/top-langs-dark.svg">
-  <img src="assets/top-langs-light.svg" width="400" alt="Code-size distribution of languages in my public repositories">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/top-langs-dark.svg?v=2">
+  <img src="assets/top-langs-light.svg?v=2" width="400" alt="Code-size distribution of languages in my public repositories">
 </picture>
 
 <sub>Updated daily. Language percentages describe code in public repositories, not skill levels. [About these visuals](docs/profile-visuals.md).</sub>
