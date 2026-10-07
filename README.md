@@ -15,37 +15,10 @@ I build AI applications, APIs, and web & mobile products. Recent work includes a
 
 ## Selected work
 
-### Course Intelligence RAG
-
-A local assistant for university course documents, with department-aware retrieval, hierarchical chunks, and a desktop interface.
-
-<sub>Python · Llama 3.1 · SBERT · FAISS</sub><br>
-[RAG code](https://github.com/onurerguden/IEU-Chat-Bot) · [RAG case study](https://onurerguden.dev/en/projects/course-intelligence)
-
-### GymRap AI Coach
-
-Connects Android health data to ChatGPT through authenticated MCP tools. Training calculations run in code; the model handles coaching.
-
-<sub>Kotlin · TypeScript · Health Connect · MCP</sub><br>
-[GymRap code](https://github.com/onurerguden/GymRap-AI-Coach) · [GymRap case study](https://onurerguden.dev/en/projects/gymrap-ai-coach)
-
-### TaskFoo
-
-A project-management app with projects, epics, task workflows, role-based access, and real-time updates. Built during my software engineering internship.
-
-<sub>Java · Spring Boot · React · PostgreSQL</sub><br>
-[TaskFoo code](https://github.com/onurerguden/TaskFoo)
-
-### HealthFactor-AI
-
-Research into drinking-water safety classification and trend prediction, with separate evaluation of real and simulated contamination data.
-
-<sub>Python · scikit-learn · Time-series analysis</sub><br>
-[Water safety code](https://github.com/onurerguden/izsu_ai_project) · [Water safety case study](https://onurerguden.dev/en/projects/water-safety)
-
-I also co-developed **[Kuyumcum](https://onurerguden.dev/en/projects/kuyumcum)**, a closed-source Flutter product for precious-metal holdings and local merchants, and engineered its AI features.
-
-More work: [İzmir transport demand analysis](https://github.com/onurerguden/IZMIR-PUBLIC-TRANSPORTATION-ML) · [Portfolio source](https://github.com/onurerguden/onurerguden-portfolio)
+- **[Kuyumcum](https://onurerguden.dev/en/projects/kuyumcum)** — Co-developed a Flutter product for precious-metal holdings and local merchants; built its AI features. Closed source.
+- **[GymRap AI Coach](https://onurerguden.dev/en/projects/gymrap-ai-coach)** — Connects Android health data to ChatGPT through authenticated MCP tools for strength coaching. [Code](https://github.com/onurerguden/GymRap-AI-Coach)
+- **[Course Intelligence RAG](https://onurerguden.dev/en/projects/course-intelligence)** — A local Llama assistant with department-aware retrieval for university course documents. [Code](https://github.com/onurerguden/IEU-Chat-Bot)
+- **[HealthFactor-AI](https://onurerguden.dev/en/projects/water-safety)** — Machine learning research into drinking-water safety classification and trend prediction. [Code](https://github.com/onurerguden/izsu_ai_project)
 
 ## Stack
 
