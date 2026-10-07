@@ -43,7 +43,7 @@ jobs:
         with:
           card: top-langs
           options: '{"username":"onurerguden","layout":"compact","langs_count":6,"card_width":440,"custom_title":"Languages in public repos","exclude_repo":"onurerguden","border_radius":12,"disable_animations":true,"size_weight":1,"count_weight":0,"title_color":"a5b4fc","icon_color":"2dd4bf","text_color":"c9d1d9","bg_color":"0d1117","border_color":"30363d"}'
-          path: assets/top-langs-dark.svg
+          path: assets/languages-dark.svg
           core_version: 2.2.1
           fail_on_error: true
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -63,7 +63,7 @@ jobs:
         with:
           card: top-langs
           options: '{"username":"onurerguden","layout":"compact","langs_count":6,"card_width":440,"custom_title":"Languages in public repos","exclude_repo":"onurerguden","border_radius":12,"disable_animations":true,"size_weight":1,"count_weight":0,"title_color":"4338ca","icon_color":"0f766e","text_color":"24292f","bg_color":"ffffff","border_color":"d0d7de"}'
-          path: assets/top-langs-light.svg
+          path: assets/languages-light.svg
           core_version: 2.2.1
           fail_on_error: true
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -85,7 +85,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats-*.svg assets/top-langs-*.svg assets/snake-*.svg
+          git add assets/stats-*.svg assets/languages-*.svg assets/snake-*.svg
           if git diff --cached --quiet; then
             exit 0
           fi
