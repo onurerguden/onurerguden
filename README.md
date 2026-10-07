@@ -1,6 +1,6 @@
 # Onur Ergüden
 
-**AI Engineer at Future Is Now · İzmir, Türkiye**
+**Software & AI Engineer**
 
 I build RAG applications and tool-calling workflows, mostly with Python, LangGraph and Qdrant. I also work on the product around them: APIs, React interfaces and mobile apps.
 
