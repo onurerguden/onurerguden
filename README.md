@@ -1,44 +1,109 @@
 # Onur Ergüden
 
-**AI Engineer at Future Is Now · RAG, agentic workflows & full-stack products**
+**AI Engineer at Future Is Now · İzmir, Türkiye**
 
-I build AI applications end to end: retrieval pipelines, tool-calling agents and the web or mobile product around them. My main languages are **Python, TypeScript and Java**. I care about grounded answers, clear evaluation and how a system behaves when something goes wrong.
+I build RAG applications and tool-calling workflows, mostly with Python, LangGraph and Qdrant. I also work on the product around them: APIs, React interfaces and mobile apps.
+
+My recent projects include a local curriculum assistant, drinking-water safety research and a personal strength coach connected to ChatGPT through MCP. I like working through the details: what gets retrieved, how answers are evaluated and what happens when a tool call fails.
 
 [Portfolio & case studies](https://onurerguden.dev) · [LinkedIn](https://www.linkedin.com/in/onurerguden/) · [Email](mailto:onurerguden5@gmail.com)
 
-## Selected work
+## Stack
 
-| Project | What it demonstrates | Core stack |
-| --- | --- | --- |
-| [Course Intelligence RAG](https://github.com/onurerguden/IEU-Chat-Bot) | Department-aware retrieval, hierarchical chunking and constrained answers over university course documents. [Case study](https://onurerguden.dev/en/projects/course-intelligence) | Python · Llama 3.1 · SBERT · FAISS |
-| [GymRap AI Coach](https://github.com/onurerguden/GymRap-AI-Coach) | OAuth-protected MCP tools, deterministic training analytics and report delivery with retries and fallbacks. [Case study](https://onurerguden.dev/en/projects/gymrap-ai-coach) | TypeScript · Cloudflare Workers · D1 · Kotlin |
-| [HealthFactor-AI](https://github.com/onurerguden/izsu_ai_project) | Two-layer drinking-water safety research: current-state classification and future safety trends, with explicit evaluation of real and synthetic data. [Case study](https://onurerguden.dev/en/projects/water-safety) | Python · scikit-learn · pandas |
-| [TaskFoo](https://github.com/onurerguden/TaskFoo) | Project, epic and task workflows with role-based access, REST APIs and real-time updates. | Java · Spring Boot · React · PostgreSQL |
-| [İzmir urban mobility](https://github.com/onurerguden/IZMIR-PUBLIC-TRANSPORTATION-ML) | Public-transport demand forecasting, clustering and association-rule analysis. | Python · XGBoost · Random Forest |
-| [Portfolio](https://github.com/onurerguden/onurerguden-portfolio) | A bilingual engineering portfolio with interactive 3D scenes, versioned content and GitHub activity. [Live site](https://onurerguden.dev) | Next.js · TypeScript · React Three Fiber |
+**Languages**
 
-I also co-developed **[Kuyumcum](https://onurerguden.dev/en/projects/kuyumcum)**, a Flutter ecosystem for precious-metal holdings and local merchants, and engineered its AI features. The case study describes my contribution; the product source is closed.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/tech/languages-dark.svg">
+  <img src="assets/tech/languages-light.svg" height="36" alt="Python, TypeScript, Java, Kotlin and Dart">
+</picture>
 
-## Experience
+Python · TypeScript · Java · Kotlin · Dart
 
-- **Future Is Now · AI Engineer** — July 2026–present. Client-facing AI applications, LangChain/LangGraph workflows and Qdrant-based RAG. Previously AI Engineer Intern, April–June 2026.
-- **VBT Software · Software Engineering Intern** — August–September 2025. Built TaskFoo with Spring Boot, React, TypeScript and PostgreSQL in Scrum-based sprints.
-- **BMC Otomotiv · Software Engineering Intern** — July–August 2025. Developed SAP ABAP applications for intern management and warehouse inventory.
+**AI & retrieval**
 
-## Tools I work with
+<p>
+  <img src="assets/tech/langchain.svg" alt="LangChain" height="24">
+  <img src="assets/tech/langgraph.svg" alt="LangGraph" height="24">
+  <img src="assets/tech/qdrant.svg" alt="Qdrant" height="24">
+  <img src="assets/tech/faiss.svg" alt="FAISS" height="24">
+</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/tech/ml-dark.svg">
+  <img src="assets/tech/ml-light.svg" height="36" alt="PyTorch, TensorFlow and scikit-learn">
+</picture>
 
-- **AI & retrieval:** LangChain, LangGraph, Qdrant, FAISS, LLM APIs, MCP
-- **Applied ML:** scikit-learn, XGBoost, TensorFlow, PyTorch, pandas
-- **Products & infrastructure:** React, Next.js, FastAPI, Spring Boot, Flutter, PostgreSQL, Firebase, Docker, Git
+PyTorch · TensorFlow · scikit-learn
 
-## Education & research
+**Web & mobile**
 
-**BSc Software Engineering**, İzmir University of Economics · June 2026 · **GPA 3.30/4.00**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/tech/web-mobile-dark.svg">
+  <img src="assets/tech/web-mobile-light.svg" height="36" alt="React, Next.js, FastAPI, Spring Boot and Flutter">
+</picture>
+
+React · Next.js · FastAPI · Spring Boot · Flutter
+
+**Data & infrastructure**
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/tech/data-tools-dark.svg">
+  <img src="assets/tech/data-tools-light.svg" height="36" alt="PostgreSQL, Firebase, SQLite, Docker, Git and Cloudflare">
+</picture>
+
+PostgreSQL · Firebase · SQLite · Docker · Git · Cloudflare
+
+## Selected projects
+
+| Project | The work behind it |
+| --- | --- |
+| [Course Intelligence RAG](https://github.com/onurerguden/IEU-Chat-Bot) | Local Llama 3.1, SBERT and FAISS over university course documents. Department-aware retrieval, hierarchical chunks and a PyQt6 interface. [Case study](https://onurerguden.dev/en/projects/course-intelligence) |
+| [GymRap AI Coach](https://github.com/onurerguden/GymRap-AI-Coach) | An Android Health Connect bridge, a Cloudflare backend and OAuth-protected MCP tools. Training numbers are computed in code; ChatGPT writes the coaching. [Case study](https://onurerguden.dev/en/projects/gymrap-ai-coach) |
+| [HealthFactor-AI](https://github.com/onurerguden/izsu_ai_project) | Drinking-water safety classification and trend prediction. The research separates real and simulated contamination results and checks for data leakage. [Case study](https://onurerguden.dev/en/projects/water-safety) |
+| [TaskFoo](https://github.com/onurerguden/TaskFoo) | A Spring Boot and React project-management app I built at VBT Software: projects, epics, task workflows, role-based access and real-time updates. |
+
+I also co-developed **[Kuyumcum](https://onurerguden.dev/en/projects/kuyumcum)** and engineered its AI features. It's a Flutter product for precious-metal holdings and local merchants; the case study covers my contribution to the closed-source app.
+
+More work: [İzmir transport demand analysis](https://github.com/onurerguden/IZMIR-PUBLIC-TRANSPORTATION-ML) · [The source behind my portfolio](https://github.com/onurerguden/onurerguden-portfolio)
+
+## GitHub activity
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
+  <img src="assets/stats-light.svg" width="400" alt="GitHub activity: stars, commits in the last year, pull requests and merged pull requests">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/top-langs-dark.svg">
+  <img src="assets/top-langs-light.svg" width="400" alt="Code-size distribution of languages in my public repositories">
+</picture>
+
+<sub>Updated daily. Language percentages describe code in public repositories, not skill levels. [About these visuals](docs/profile-visuals.md).</sub>
+
+### Contribution snake
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-dark.svg">
+  <img src="assets/snake-light.svg" width="100%" alt="A snake moves through my GitHub contribution graph. The animation stops when reduced motion is enabled.">
+</picture>
+
+## Background
+
+<details>
+<summary>Experience, education & research</summary>
+
+- **Future Is Now · AI Engineer**, July 2026–present. Previously AI Engineer Intern, April–June 2026. Client-facing AI applications, LangChain/LangGraph workflows and Qdrant-based retrieval.
+- **VBT Software · Software Engineering Intern**, August–September 2025. Spring Boot, React, TypeScript and PostgreSQL in Scrum-based sprints.
+- **BMC Otomotiv · Software Engineering Intern**, July–August 2025. SAP ABAP applications for intern management and warehouse inventory.
+
+**BSc Software Engineering**, İzmir University of Economics · June 2026 · GPA **3.30/4.00**
 
 **Google AI & Technology Academy graduate**, 2026 · Deep Learning training
 
-Co-author of *Two-layered Artificial Intelligence System to Assess and Forecast the Safety Level of Drinking Water Resources*. [Research context and current status](https://onurerguden.dev/en/research)
+Co-author of *Two-layered Artificial Intelligence System to Assess and Forecast the Safety Level of Drinking Water Resources*. [Research context and current status](https://onurerguden.dev/en/research).
 
-Based in **İzmir, Türkiye** · Turkish (native) · English (C1)
+Turkish (native) · English (C1)
 
-For project details, professional inquiries or a copy of my CV, visit [onurerguden.dev](https://onurerguden.dev) or [email me](mailto:onurerguden5@gmail.com).
+</details>
+
+Away from the keyboard, I'm usually playing basketball or tennis, or reading.
+
+For project details or a copy of my CV: [onurerguden.dev](https://onurerguden.dev) · [onurerguden5@gmail.com](mailto:onurerguden5@gmail.com)

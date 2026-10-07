@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [.github/workflows/profile-visuals.yml]
+    paths: [.github/workflows/profile-visuals.yml, scripts/prepare_snake.py]
 
 concurrency:
   group: profile-visuals
@@ -42,7 +42,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
         with:
           card: top-langs
-          options: '{"username":"onurerguden","layout":"compact","langs_count":6,"card_width":360,"custom_title":"Languages in public repos","exclude_repo":"onurerguden","border_radius":12,"disable_animations":true,"size_weight":1,"count_weight":0,"title_color":"a5b4fc","icon_color":"2dd4bf","text_color":"c9d1d9","bg_color":"0d1117","border_color":"30363d"}'
+          options: '{"username":"onurerguden","layout":"compact","langs_count":6,"card_width":440,"custom_title":"Languages in public repos","exclude_repo":"onurerguden","border_radius":12,"disable_animations":true,"size_weight":1,"count_weight":0,"title_color":"a5b4fc","icon_color":"2dd4bf","text_color":"c9d1d9","bg_color":"0d1117","border_color":"30363d"}'
           path: assets/top-langs-dark.svg
           core_version: 2.2.1
           fail_on_error: true
@@ -62,7 +62,7 @@ jobs:
         uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
         with:
           card: top-langs
-          options: '{"username":"onurerguden","layout":"compact","langs_count":6,"card_width":360,"custom_title":"Languages in public repos","exclude_repo":"onurerguden","border_radius":12,"disable_animations":true,"size_weight":1,"count_weight":0,"title_color":"4338ca","icon_color":"0f766e","text_color":"24292f","bg_color":"ffffff","border_color":"d0d7de"}'
+          options: '{"username":"onurerguden","layout":"compact","langs_count":6,"card_width":440,"custom_title":"Languages in public repos","exclude_repo":"onurerguden","border_radius":12,"disable_animations":true,"size_weight":1,"count_weight":0,"title_color":"4338ca","icon_color":"0f766e","text_color":"24292f","bg_color":"ffffff","border_color":"d0d7de"}'
           path: assets/top-langs-light.svg
           core_version: 2.2.1
           fail_on_error: true
@@ -77,6 +77,9 @@ jobs:
             assets/snake-dark.svg?palette=github-dark&color_snake=#a5b4fc&color_dots=#161b22,#134e4a,#0f766e,#14b8a6,#5eead4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Honor reduced-motion preference
+        run: python3 scripts/prepare_snake.py
 
       - name: Save generated visuals
         run: |
