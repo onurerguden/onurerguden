@@ -5,7 +5,8 @@ not a replacement game solver. This runs after the pinned upstream generator.
 """
 
 from bisect import bisect_right
-from math import atan2, ceil, degrees
+from math import atan2, ceil, degrees, hypot
+from statistics import median
 from pathlib import Path
 import re
 import xml.etree.ElementTree as ET
@@ -90,10 +91,13 @@ def decorate(path):
         if node.get("class", "").split()[:1] == ["s"]:
             root.remove(node)
     extra = [f".snake-trail{{fill:var(--cs);stroke:none;animation-duration:{duration}ms;animation-timing-function:linear;animation-iteration-count:infinite}}"]
+    # Use route speed so daily path duration does not alter body-piece spacing.
+    speeds = [hypot(bx-ax, by-ay) / (bt-at) for (at, (ax, ay)), (bt, (bx, by)) in zip(route, route[1:]) if bt > at and (ax, ay) != (bx, by)]
+    half_cell_lag = 8 / median(speeds)
     # Eight overlapping half-cell pieces begin at four cells long; at most 12 cells.
     base, growing = 8, min(16, len(food))
     for index in reversed(range(base + growing)):
-        lag = (index + 1) * 0.16
+        lag = (index + 1) * half_cell_lag
         x, y = position(route, -lag)
         name = f"trail{index}"
         moving = element(root, "g", class_="snake-trail")
@@ -106,7 +110,9 @@ def decorate(path):
             grow_name = f"growth{index}"
             visible.set("class", "snake-growth")
             visible.set("style", f"animation-name:{grow_name}")
-            extra.append(f"@keyframes {grow_name}{{0%,{max(0,trigger-.08):.5f}%{{opacity:0}}{trigger:.5f}%,97%{{opacity:1}}99.5%,100%{{opacity:0}}}}")
+            fade_start = max(97.0, trigger)
+            fade_end = min(100.0, max(99.5, fade_start + .1))
+            extra.append(f"@keyframes {grow_name}{{0%,{max(0,trigger-.08):.5f}%{{opacity:0}}{trigger:.5f}%,{fade_start:.5f}%{{opacity:1}}{fade_end:.5f}%,100%{{opacity:0}}}}")
         radius = 6.7 - 2.5 * index / max(1, base + growing - 1)
         element(visible, "circle", cx=8, cy=8, r=f"{radius:.2f}")
         element(visible, "circle", cx=6.5, cy=5.5, r=1, fill="#ffffff", opacity=".25", stroke="none")
