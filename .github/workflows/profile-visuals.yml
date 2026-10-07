@@ -1,0 +1,91 @@
+name: Refresh profile visuals
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/profile-visuals.yml]
+
+concurrency:
+  group: profile-visuals
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - name: Check out profile
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Generate stats (dark)
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
+        with:
+          card: stats
+          options: '{"username":"onurerguden","show_icons":true,"hide_rank":true,"hide":"issues,contribs","show":"prs_merged","custom_title":"GitHub activity","card_width":440,"line_height":24,"number_format":"long","disable_animations":true,"border_radius":12,"border_color":"30363d","title_color":"a5b4fc","icon_color":"2dd4bf","text_color":"c9d1d9","bg_color":"0d1117"}'
+          path: assets/stats-dark.svg
+          core_version: 2.2.1
+          fail_on_error: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top-langs (dark)
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
+        with:
+          card: top-langs
+          options: '{"username":"onurerguden","layout":"compact","langs_count":6,"card_width":360,"custom_title":"Languages in public repos","exclude_repo":"onurerguden","border_radius":12,"disable_animations":true,"size_weight":1,"count_weight":0,"title_color":"a5b4fc","icon_color":"2dd4bf","text_color":"c9d1d9","bg_color":"0d1117","border_color":"30363d"}'
+          path: assets/top-langs-dark.svg
+          core_version: 2.2.1
+          fail_on_error: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate stats (light)
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
+        with:
+          card: stats
+          options: '{"username":"onurerguden","show_icons":true,"hide_rank":true,"hide":"issues,contribs","show":"prs_merged","custom_title":"GitHub activity","card_width":440,"line_height":24,"number_format":"long","disable_animations":true,"border_radius":12,"border_color":"d0d7de","title_color":"4338ca","icon_color":"0f766e","text_color":"24292f","bg_color":"ffffff"}'
+          path: assets/stats-light.svg
+          core_version: 2.2.1
+          fail_on_error: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top-langs (light)
+        uses: stats-organization/github-readme-stats-action@2c498845f71017821efaad14293ebc736156ef21 # v2
+        with:
+          card: top-langs
+          options: '{"username":"onurerguden","layout":"compact","langs_count":6,"card_width":360,"custom_title":"Languages in public repos","exclude_repo":"onurerguden","border_radius":12,"disable_animations":true,"size_weight":1,"count_weight":0,"title_color":"4338ca","icon_color":"0f766e","text_color":"24292f","bg_color":"ffffff","border_color":"d0d7de"}'
+          path: assets/top-langs-light.svg
+          core_version: 2.2.1
+          fail_on_error: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate contribution snake
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: onurerguden
+          outputs: |
+            assets/snake-light.svg?color_snake=#4338ca&color_dots=#ebedf0,#ccfbf1,#5eead4,#14b8a6,#0f766e
+            assets/snake-dark.svg?palette=github-dark&color_snake=#a5b4fc&color_dots=#161b22,#134e4a,#0f766e,#14b8a6,#5eead4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Save generated visuals
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/stats-*.svg assets/top-langs-*.svg assets/snake-*.svg
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "chore: refresh profile visuals"
+          git pull --rebase origin main
+          git push origin HEAD:main
