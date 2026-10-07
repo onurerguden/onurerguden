@@ -13,7 +13,7 @@ import xml.etree.ElementTree as ET
 
 NS = "http://www.w3.org/2000/svg"
 ET.register_namespace("", NS)
-VERSION = "2"
+VERSION = "3"
 
 
 def element(parent, tag, **attributes):
@@ -66,6 +66,8 @@ def decorate(path):
     root = tree.getroot()
     if root.get("data-snake-character") == VERSION:
         return
+    if root.get("data-snake-character") is not None:
+        raise ValueError("Generate a fresh upstream SVG before changing decoration versions")
     style = root.find(f"{{{NS}}}style")
     if style is None:
         raise ValueError(f"Missing animation stylesheet: {path}")
@@ -85,10 +87,13 @@ def decorate(path):
             if match:
                 food.append((float(match[1]), float(cell.get("x")) + 6, float(cell.get("y")) + 6))
     food.sort()
-    eating_times = [t for t, _, _ in food]
-    # Preserve the grid and collection bar, replacing only the four square pieces.
+    # Preserve the contribution grid; remove the upstream collection/progress bar.
+    css = re.sub(r"@keyframes\s+u[\w-]*\{((?:[^{}]|\{[^{}]*\})*)\}", "", css)
+    css = re.sub(r"\.u(?:\.u[\w-]+)?\{[^}]*\}", "", css)
+    root.set("height", "160")
+    root.set("viewBox", "-16 -32 880 160")
     for node in list(root):
-        if node.get("class", "").split()[:1] == ["s"]:
+        if node.get("class", "").split()[:1] in (["s"], ["u"]):
             root.remove(node)
     extra = [f".snake-trail{{fill:var(--cs);stroke:none;animation-duration:{duration}ms;animation-timing-function:linear;animation-iteration-count:infinite}}"]
     # Use route speed so daily path duration does not alter body-piece spacing.
@@ -106,23 +111,22 @@ def decorate(path):
         visible = element(moving, "g")
         if index >= base:
             ordinal = index - base + 1
-            trigger = eating_times[ceil(ordinal * len(food) / growing) - 1]
+            trigger = food[ceil(ordinal * len(food) / growing) - 1][0]
             grow_name = f"growth{index}"
             visible.set("class", "snake-growth")
             visible.set("style", f"animation-name:{grow_name}")
             fade_start = max(97.0, trigger)
             fade_end = min(100.0, max(99.5, fade_start + .1))
             extra.append(f"@keyframes {grow_name}{{0%,{max(0,trigger-.08):.5f}%{{opacity:0}}{trigger:.5f}%,{fade_start:.5f}%{{opacity:1}}{fade_end:.5f}%,100%{{opacity:0}}}}")
-        radius = 6.7 - 2.5 * index / max(1, base + growing - 1)
+        radius = 6.2 - 2.4 * index / max(1, base + growing - 1)
         element(visible, "circle", cx=8, cy=8, r=f"{radius:.2f}")
-        element(visible, "circle", cx=6.5, cy=5.5, r=1, fill="#ffffff", opacity=".25", stroke="none")
     extra.append(f".snake-growth{{opacity:0;animation-duration:{duration}ms;animation-timing-function:linear;animation-iteration-count:infinite}}")
     # Short rings at the consumed cell are synchronized with its upstream clearing.
     for index, (time, x, y) in enumerate(food):
         name = f"meal{index}"
-        ring = element(root, "circle", cx=x, cy=y, r=8, fill="none", stroke="var(--cs)", stroke_width=1.2, opacity=0)
+        ring = element(root, "circle", cx=x, cy=y, r=7, fill="none", stroke="var(--cs)", stroke_width=1, opacity=0)
         ring.set("style", f"animation:{name} {duration}ms linear infinite")
-        extra.append(f"@keyframes {name}{{{pulses([time], 'opacity', '0', '.75', .10, .48)}}}")
+        extra.append(f"@keyframes {name}{{{pulses([time], 'opacity', '0', '.3', .10, .48)}}}")
     head = element(root, "g");head.set("class", "s s0")
     face = element(head, "g");face.set("class", "snake-face")
     angle_points = []
@@ -135,17 +139,13 @@ def decorate(path):
     orientation = "".join(f"{t:.5f}%{{transform:rotate({a:g}deg)}}" for t, a in angle_points)
     orientation += f"100%{{transform:rotate({angle_points[0][1]:g}deg)}}"
     extra.append(f".snake-face{{transform:rotate({angle_points[0][1]:g}deg);transform-origin:8px 8px;animation:heading {duration}ms step-end infinite}}@keyframes heading{{{orientation}}}")
-    element(face, "ellipse", cx=8, cy=8, rx=10, ry=8, fill="var(--cs)", stroke="#527000", stroke_width=".7")
-    element(face, "ellipse", cx=6, cy=5, rx=5, ry=2, fill="#ffffff", opacity=".15")
-    for cy in (2.3, 13.7):
-        element(face, "circle", cx=10.5, cy=cy, r=2.8, fill="#ffffff", stroke="#080e1c", stroke_width=".45")
-        element(face, "circle", cx=11.2, cy=cy, r=1.3, fill="#080e1c")
-    mouth = element(face, "path", d="M11 8L18 4.5L18 11.5Z", fill="#080e1c")
-    mouth.set("class", "snake-mouth")
-    extra.append(f".snake-mouth{{transform:scaleY(.06);transform-origin:14px 8px;animation:chew {duration}ms linear infinite}}@keyframes chew{{{pulses(eating_times,'transform','scaleY(.06)','scaleY(1)',.12,.28)}}}")
-    tongue = element(face, "path", d="M17 8h7m0 0 4-2.5m-4 2.5 4 2.5", fill="none", stroke="#f27791", stroke_width=1.6, stroke_linecap="round")
+    # A flat rounded head and dot eyes keep the character friendly and simple.
+    element(face, "ellipse", cx=8, cy=8, rx=8.4, ry=7, fill="var(--cs)")
+    for cy in (4.6, 11.4):
+        element(face, "circle", cx=10.5, cy=cy, r=1.35, fill="#203143")
+    tongue = element(face, "path", d="M15.8 8h4.2m0 0 2.3-1.3m-2.3 1.3 2.3 1.3", fill="none", stroke="#e5a4b0", stroke_width=1, stroke_linecap="round")
     tongue.set("class", "snake-tongue")
-    extra.append(".snake-tongue{opacity:0;transform-origin:17px 8px;animation:taste 2300ms ease-in-out infinite}@keyframes taste{0%,62%,100%{opacity:0;transform:scaleX(.3)}68%,76%{opacity:1;transform:scaleX(1)}72%{opacity:1;transform:scaleX(.7)}82%{opacity:0;transform:scaleX(.3)}}")
+    extra.append(".snake-tongue{opacity:0;transform-origin:15.8px 8px;animation:taste 3100ms ease-in-out infinite}@keyframes taste{0%,62%,100%{opacity:0;transform:scaleX(.3)}68%,76%{opacity:1;transform:scaleX(1)}72%{opacity:1;transform:scaleX(.7)}82%{opacity:0;transform:scaleX(.3)}}")
     extra.append("@media(prefers-reduced-motion:reduce){*{animation:none!important}.snake-growth,.snake-tongue{opacity:0!important}}")
     style.text = css + "".join(extra)
     root.set("data-snake-character", VERSION)
@@ -153,11 +153,11 @@ def decorate(path):
     root.set("data-initial-body-pieces", str(base))
     root.set("data-max-body-pieces", str(base + growing))
     desc = root.find(f"{{{NS}}}desc")
-    desc.text = "Contribution route generated by Platane/snk. Eyes, forked tongue, eating reactions and bounded growth by Onur Ergüden. Growth follows consumed contribution squares; animation respects reduced motion."
+    desc.text = "Contribution route generated by Platane/snk. Soft dot eyes, a small forked tongue, subtle eating rings and bounded growth by Onur Ergüden. Growth follows consumed contribution squares; animation respects reduced motion."
     tree.write(path, encoding="unicode")
     print(f"{path}: {len(food)} food cells, {base} to {base+growing} body pieces, {duration}ms loop")
 
 
 if __name__ == "__main__":
     for theme in ("light", "dark"):
-        decorate(Path(f"assets/contribution-snake-{theme}.svg"))
+        decorate(Path(f"assets/contribution-snake-soft-{theme}.svg"))

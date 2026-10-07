@@ -105,8 +105,8 @@ More work: [İzmir transport demand analysis](https://github.com/onurerguden/IZM
 <sub>Updated daily. Language percentages describe repository code, not skill levels. [About these visuals](docs/profile-visuals.md).</sub>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/contribution-snake-dark.svg">
-  <img src="assets/contribution-snake-light.svg" width="100%" alt="A snake with eyes and a forked tongue eats contribution squares and gradually grows. Reduced-motion preference stops the animation.">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/contribution-snake-soft-dark.svg">
+  <img src="assets/contribution-snake-soft-light.svg" width="100%" alt="A soft, rounded snake with dot eyes and a small forked tongue eats contribution squares and gradually grows. Reduced-motion preference stops the animation.">
 </picture>
 
 ## Background
