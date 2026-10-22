@@ -1,8 +1,8 @@
 # Onur Ergüden
 
-**Software & AI Engineer**
+**AI engineer · Software engineer** · İzmir, Türkiye
 
-I build AI applications, APIs, and web & mobile products. Recent work includes a local course assistant, a strength coach connected through MCP, and drinking-water safety research.
+I'm Onur Ergüden, an AI engineer. I build LLM applications end to end: retrieval, tool-calling agents with LangGraph and MCP, and the software around them. AI Engineer at [Future is Now](https://github.com/future-is-now-ai); my research on drinking-water safety was accepted by IJEA.
 
 [Portfolio & case studies](https://onurerguden.dev) · [LinkedIn](https://www.linkedin.com/in/onurerguden/) · [Email](mailto:onurerguden5@gmail.com)
 
