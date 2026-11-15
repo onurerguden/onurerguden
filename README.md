@@ -7,18 +7,6 @@ I'm Onur Ergüden, an AI engineer. I build LLM applications end to end: retrieva
 [Portfolio & case studies](https://onurerguden.dev) · [LinkedIn](https://www.linkedin.com/in/onurerguden/) · [Email](mailto:onurerguden5@gmail.com)
 
 
-## Selected work
-
-- **[Kuyumcum](https://onurerguden.dev/en/projects/kuyumcum)** — Co-developed a Flutter product for precious-metal holdings and local merchants; built its AI features. Closed source.
-- **[GymRap AI Coach](https://onurerguden.dev/en/projects/gymrap-ai-coach)** — Connects Android health data to ChatGPT through authenticated MCP tools for strength coaching. [Code](https://github.com/onurerguden/GymRap-AI-Coach)
-- **[Course Intelligence RAG](https://onurerguden.dev/en/projects/course-intelligence)** — A local Llama assistant with department-aware retrieval for university course documents. [Code](https://github.com/onurerguden/IEU-Chat-Bot)
-- **[HealthFactor-AI](https://onurerguden.dev/en/projects/water-safety)** — Machine learning research into drinking-water safety classification and trend prediction. [Code](https://github.com/onurerguden/izsu_ai_project)
-- **[CarbonPilot AI](https://onurerguden.dev/en/projects/carbonpilot)** — Google AI & Technology Academy team project for CBAM carbon accounting. I built the agent orchestration, strict extraction, transition simulation and report integrity features. [My fork](https://github.com/onurerguden/CarbonPilot-AI)
-- **[Transit Replan Lab](https://github.com/onurerguden/transit-replan-lab)** — Multi-agent transit disruption simulator with archived GTFS and independently verified joint itineraries.
-
-
-## Stack
-
 **Languages & markup**
 
 <p>
