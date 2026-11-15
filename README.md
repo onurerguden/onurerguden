@@ -19,6 +19,17 @@ I'm Onur Ergüden, an AI engineer. I build LLM applications end to end: retrieva
 - **[GymRap AI Coach](https://onurerguden.dev/en/projects/gymrap-ai-coach)** — Connects Android health data to ChatGPT through authenticated MCP tools for strength coaching. [Code](https://github.com/onurerguden/GymRap-AI-Coach)
 - **[Course Intelligence RAG](https://onurerguden.dev/en/projects/course-intelligence)** — A local Llama assistant with department-aware retrieval for university course documents. [Code](https://github.com/onurerguden/IEU-Chat-Bot)
 - **[HealthFactor-AI](https://onurerguden.dev/en/projects/water-safety)** — Machine learning research into drinking-water safety classification and trend prediction. [Code](https://github.com/onurerguden/izsu_ai_project)
+- **[CarbonPilot AI](https://onurerguden.dev/en/projects/carbonpilot)** — Google AI & Technology Academy team project for CBAM carbon accounting. I built the agent orchestration, strict extraction, transition simulation and report integrity features. [My fork](https://github.com/onurerguden/CarbonPilot-AI)
+- **[Transit Replan Lab](https://github.com/onurerguden/transit-replan-lab)** — Multi-agent transit disruption simulator with archived GTFS and independently verified joint itineraries.
+
+## Team repositories
+
+| Project | My contribution | Repository |
+| --- | --- | --- |
+| VoiceOps | Scaffolded the Turkish voice-operations app and added API routing and tests. | [VoiceOps fork](https://github.com/onurerguden/VoiceOps) |
+| Home Budget | Implemented budget alerts and desktop expense filtering and sorting. | [Home Budget fork](https://github.com/onurerguden/HomeBudget) |
+| İzmir public transportation | Contributed to the CE 477 team’s ridership and data-mining analysis. | [CE 477 fork](https://github.com/onurerguden/CE-477-Data-Science) · [Project overview](https://github.com/onurerguden/IZMIR-PUBLIC-TRANSPORTATION-ML) |
+| Workstation Scheduling Simulator | Contributed to the Java task scheduler and workstation simulation. | [SE116 fork](https://github.com/onurerguden/WorkStationSimilationProject) |
 
 ## Stack
 
@@ -177,7 +188,7 @@ I'm Onur Ergüden, an AI engineer. I build LLM applications end to end: retrieva
 <details>
 <summary>Experience, education & research</summary>
 
-- **Future Is Now · AI Engineer**, July 2026–present. Previously AI Engineer Intern, April–June 2026. Client-facing AI applications, LangChain/LangGraph workflows and Qdrant-based retrieval.
+- **Future Is Now · Software & AI Engineer**, September 2026–present. Previously part-time, June–August 2026, and an intern, April–June 2026. Client-facing AI applications, LangChain/LangGraph workflows and Qdrant-based retrieval.
 - **VBT Software · Software Engineering Intern**, August–September 2025. Spring Boot, React, TypeScript and PostgreSQL in Scrum-based sprints.
 - **BMC Otomotiv · Software Engineering Intern**, July–August 2025. SAP ABAP applications for intern management and warehouse inventory.
 
