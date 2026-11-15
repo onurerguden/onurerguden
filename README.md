@@ -6,12 +6,6 @@ I'm Onur Ergüden, an AI engineer. I build LLM applications end to end: retrieva
 
 [Portfolio & case studies](https://onurerguden.dev) · [LinkedIn](https://www.linkedin.com/in/onurerguden/) · [Email](mailto:onurerguden5@gmail.com)
 
-<picture>
-  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/engineering-narrow-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/engineering-narrow-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/engineering-wide-dark.svg">
-  <img src="assets/engineering-wide-light.svg" width="100%" alt="A geometric drawing connects documents, a data workflow, code, and an application interface.">
-</picture>
 
 ## Selected work
 
@@ -22,14 +16,6 @@ I'm Onur Ergüden, an AI engineer. I build LLM applications end to end: retrieva
 - **[CarbonPilot AI](https://onurerguden.dev/en/projects/carbonpilot)** — Google AI & Technology Academy team project for CBAM carbon accounting. I built the agent orchestration, strict extraction, transition simulation and report integrity features. [My fork](https://github.com/onurerguden/CarbonPilot-AI)
 - **[Transit Replan Lab](https://github.com/onurerguden/transit-replan-lab)** — Multi-agent transit disruption simulator with archived GTFS and independently verified joint itineraries.
 
-## Team repositories
-
-| Project | My contribution | Repository |
-| --- | --- | --- |
-| VoiceOps | Scaffolded the Turkish voice-operations app and added API routing and tests. | [VoiceOps fork](https://github.com/onurerguden/VoiceOps) |
-| Home Budget | Implemented budget alerts and desktop expense filtering and sorting. | [Home Budget fork](https://github.com/onurerguden/HomeBudget) |
-| İzmir public transportation | Contributed to the CE 477 team’s ridership and data-mining analysis. | [CE 477 fork](https://github.com/onurerguden/CE-477-Data-Science) · [Project overview](https://github.com/onurerguden/IZMIR-PUBLIC-TRANSPORTATION-ML) |
-| Workstation Scheduling Simulator | Contributed to the Java task scheduler and workstation simulation. | [SE116 fork](https://github.com/onurerguden/WorkStationSimilationProject) |
 
 ## Stack
 
